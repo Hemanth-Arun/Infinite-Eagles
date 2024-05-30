@@ -98,6 +98,7 @@
 
         main {
             padding: 0;
+padding-top: 100px;
         }
         
         footer {
@@ -125,6 +126,54 @@
         transform: translateY(0);
     }
 }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    margin: 15px 0;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.image-container {
+    width: 48%;
+    text-align: center;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+
+
     </style>
 </head>
 <body>
@@ -151,17 +200,27 @@
     </header>
 
     <main>
-        <section>
-            <h2>Our Story</h2>
-            <div>
-                <img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\P1.jpeg" alt="Image 1" style="width: 300px; height: auto;">
-                <p>Description of Image 1</p>
+       <div class="container">
+<h1>About Us</h1>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <h2 align="center">Our Mission</h2>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <h2 align="center">Our Team</h2>
+        <div class="section">
+            <div class="image-container">
+                <img src="C:\Users\rakes\OneDrive\Desktop\Vk.jpg" alt="Team Collaboration" class="responsive-image">
+                <p>Our team working together on innovative projects.</p>
             </div>
-            <div>
-                <img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\P2.jpeg" alt="Image 2" style="width: 300px; height: auto;">
-                <p>Description of Image 2</p>
+            <div class="image-container">
+                <img src="C:\Users\rakes\OneDrive\Desktop\Vk.jpg" alt="Service Delivery" class="responsive-image">
+                <p>Delivering exceptional service to our clients.</p>
             </div>
-        </section>
+        </div>
+        <h2 align="center">Why Choose Us?</h2>
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        
+    </div>
+
     </main>
 
     <footer>
