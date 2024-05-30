@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 0%; /* Adjust the margin as needed */ 
+            display:inline-block; /* Display links in a single line */
+        }
+
+        header a:hover {
+            color: #000;
+        }
+
+        header nav a.active {
+            color: red;
+            font-weight: bold;
+        }
+
+        .dropdown-content a.active {
+            color: red;
+        }
+
+        header img{
+            height: 50px; /* Adjust the height as needed */
+        }
+
+        nav{
+            margin-right: 2%; /* Adjust the margin as needed */
+        }
+
+        nav a{
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1000;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            color: red;
+        }
+
+        .icons{
+            display: inline;
+        }
+
+        .icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px; /* Adjust the font size as needed */
+        }
+
+        .icons a:hover {
+            color: #000;
+        }
+        
+        main {
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title {
+            margin-top: 90px;
+            font-size: xx-large;
+            font-weight: bolder;
+            color: red;
+        }
+
+        .image-gallery {
+            margin-top: 0%;
+            margin-bottom: 5%;
+            margin-left: 5%;
+            margin-right: 5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery-row {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+            padding-top: 20px;
+            padding-right: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 300px; /* Set a fixed width for each image */
+            width: 450px; /* Set a fixed height for each image */
+            overflow: hidden;
+            margin: 20px; /* Adjust the margin between images */
+        }
+
+        .gallery-image,
+        .image-name {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            transition: opacity 0.3s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .gallery-image {
+            object-fit: cover;
+        }
+
+        .image-name {
+            opacity: 0; /* Initially hidden */
+            color: black; /* Adjust text color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px; /* Adjust font size as needed */
+            background-color: #f4f4f4; /* Semi-transparent background */
+        }
+
+        .gallery-item:hover .gallery-image {
+            opacity: 0; /* Hide the image on hover */
+        }
+
+        .gallery-item:hover .image-name {
+            opacity: 1; /* Display image name on hover */
+        }
+
+        footer {
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="main.html"> <!-- Link to the main page -->
+            <img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\logo.png" alt="Logo" style="height: 50px;"> <!-- Adjust the height as needed -->
+        </a>
+        <nav>
+            <div class="dropdown">
+                <a href="work.html"  class="active">Work</a>
+                            <div class="dropdown-content">
+                                <a href="Industrial.html">Industrial Projects</a>
+                                <a href="Residential.html" class="active">Residential Projects</a>
+                            </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <div class="icons">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a> 
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="title">Residential Projects</div>
+        <div class="image-gallery">
+            <div class="gallery-row">
+                <div class="gallery-item">
+                    <a href="image1.html">
+                        <img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\image1.jpg" alt="Image 1" class="gallery-image" />
+                        <span class="image-name">Image 1</span>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="image2.html">
+                        <img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\image2.jpg" alt="Image 2" class="gallery-image" />
+                        <span class="image-name">Image 2</span>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="image3.html">
+                        <img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\image3.jpg" alt="Image 3" class="gallery-image" />
+                        <span class="image-name">Image 3</span>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery-row">
+                <div class="gallery-item">
+                    <a href="image4.html">
+                        <img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\image4.jpg" alt="Image 4" class="gallery-image" />
+                        <span class="image-name">Image 4</span>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="image5.html">
+                        <img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\image5.jpg" alt="Image 5" class="gallery-image" />
+                        <span class="image-name">Image 5</span>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="image6.html">
+                        <img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\image6.jpg" alt="Image 6" class="gallery-image" />
+                        <span class="image-name">Image 6</span>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery-row">
+                <div class="gallery-item">
+                    <a href="image7.html">
+                        <img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\image7.jpg" alt="Image 7" class="gallery-image" />
+                        <span class="image-name">Image 7</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>    
+
+    <footer>
+        &copy; All rights reserved.
+    </footer>  
+    <script src="https://kit.fontawesome.com/e207acd800.js" crossorigin="anonymous"></script> 
+
+</body>
+</html>

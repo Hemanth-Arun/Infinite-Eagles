@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        header {   
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 0%; /* Adjust the margin as needed */ 
+            display:inline-block; /* Display links in a single line */
+        }
+
+        header a:hover {
+            color: #000;
+        }
+
+        header img{
+            height: 50px; /* Adjust the height as needed */
+        }
+
+        nav{
+            margin-right: 2%; /* Adjust the margin as needed */
+        }
+
+        nav a {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1000;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            color: red;
+        }
+
+        .icons {
+            display: inline;
+        }
+
+        .icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px; /* Adjust the font size as needed */
+        }
+
+        .icons a:hover {
+            color: #000;
+        }
+
+        main {
+            padding-top: 0;
+        }
+
+        #imageSlider {
+            
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        .imageContainer {
+           
+            height: 82%;
+            margin-top: 81px;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 400%; /* Adjust the width based on the number of images */
+        }
+
+        .imageContainer a{
+            width: 25%;
+        }
+
+        .imageContainer img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .left-arrow {
+            left: 0;
+        }
+
+        .right-arrow {
+            right: 0;
+        }
+
+        footer {
+            color: #333;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="main.html"> <!-- Link to the main page -->
+            <img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\logo.png" alt="Logo" style="height: 50px;"> <!-- Adjust the height as needed -->
+        </a>
+        <nav>
+            <div class="dropdown">
+                <a href="work.html">Work</a>
+                <div class="dropdown-content">
+                    <a href="Industrial.html">Industrial Projects</a>
+                    <a href="Residential.html">Residential Projects</a>
+                </div>
+            </div> 
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <div class="icons">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a> 
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="imageSlider">
+            <div class="imageContainer">
+                <a href="image1.html"><img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\img4.jpg" alt="Image 1"></a>
+                <a href="image2.html"><img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\img4.jpg" alt="Image 2"></a>
+                <a href="image3.html"><img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\img4.jpg" alt="Image 3"></a>
+                <a href="image4.html"><img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\img4.jpg" alt="Image 4"></a>
+            </div>
+            <button class="arrow left-arrow" onclick="scrollImage(-1)">&larr;</button>
+            <button class="arrow right-arrow" onclick="scrollImage(1)">&rarr;</button>
+        </div>
+    </main>
+
+    <footer>
+        &copy; All rights reserved.
+    </footer>
+    
+    <script src="https://kit.fontawesome.com/e207acd800.js" crossorigin="anonymous"></script>
+    <script>
+        // JavaScript for automatic image scrolling (updated to 10 seconds)
+        let currentIndex = 0;
+        const imageContainer = document.querySelector('.imageContainer');
+        const totalImages = document.querySelectorAll('.imageContainer img').length;
+    
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateImage();
+        }
+    
+        function updateImage() {
+            const transformValue = -currentIndex * 25 + '%'; // 25% represents the width of one image
+            imageContainer.style.transform = 'translateX(' + transformValue + ')';
+        }
+    
+        setInterval(nextImage, 10000); // Updated to scroll every 10 seconds
+    
+        // JavaScript for manual image scrolling
+        function scrollImage(direction) {
+            currentIndex = (currentIndex + direction + totalImages) % totalImages;
+            updateImage();
+        }
+    
+        // Show/hide arrows on mouseenter/mouseleave
+        const imageSlider = document.getElementById('imageSlider');
+        const leftArrow = document.querySelector('.left-arrow');
+        const rightArrow = document.querySelector('.right-arrow');
+    
+        imageSlider.addEventListener('mouseenter', function() {
+            leftArrow.style.opacity = 1;
+            rightArrow.style.opacity = 1;
+        });
+    
+        imageSlider.addEventListener('mouseleave', function() {
+            leftArrow.style.opacity = 0;
+            rightArrow.style.opacity = 0;
+        });
+    </script>      
+
+</body>
+</html>

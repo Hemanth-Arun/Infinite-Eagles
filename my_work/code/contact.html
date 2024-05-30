@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 0%; /* Adjust the margin as needed */ 
+            display:inline-block; /* Display links in a single line */
+        }
+
+        header a:hover {
+            color: #000;
+        }
+        
+        header nav a.active {
+            color: red;
+            font-weight: bold;
+        }
+
+        header img{
+            height: 50px; /* Adjust the height as needed */
+        }
+
+        nav{
+            margin-right: 2%; /* Adjust the margin as needed */
+        }
+
+        nav a{
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1000;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            color: red;
+        }
+
+        main.contact-container {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto 2em;
+        }
+
+        .maps-container {
+            flex: 1;
+            margin-top: 150px;
+            height: 400px;
+        }
+
+        .details-container {
+            flex: 1;
+            margin-top: 100px;
+            padding: 2em;
+        }
+
+        .details-container h2 {
+            color: #333;
+        }
+
+        .details-container p {
+            margin-bottom: 1em;
+        }
+
+        .details-container ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .details-container ul li {
+            margin-bottom: 0.5em;
+        }
+
+        .icons1 {
+            display: flex;
+            gap: 20px; /* Adjust the gap between icons */
+            margin-top: 15px; /* Adjust the margin-top as needed */
+        }
+
+        .icons{
+            display: inline;
+        }
+
+        .icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px; /* Adjust the font size as needed */
+        }
+
+        .icons a:hover {
+            color: #000;
+        }
+
+        .icons1 a {
+            text-decoration: none;
+            color: #333;
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+
+        .icons1 a:hover {
+            color: #000;
+        }
+        
+        footer {
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="main.html"> <!-- Link to the main page -->
+            <img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\logo.png" alt="Logo" style="height: 50px;"> <!-- Adjust the height as needed -->
+        </a>
+        <nav>
+            <div class="dropdown">
+                <a href="work.html">Work</a>
+                            <div class="dropdown-content">
+                                <a href="Industrial.html">Industrial Projects</a>
+                                <a href="Residential.html">Residential Projects</a>
+                            </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+            <div class="icons">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a> 
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <!-- Left side (Maps) -->
+        <div class="maps-container">
+            <!-- Embed your maps here (e.g., using Google Maps API) -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12403.735180008078!2d77.59754993567587!3d12.994211418848815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1649294a5637%3A0xb1f8b77e331512cf!2sBengaluru%20Palace!5e0!3m2!1sen!2sin!4v1708449962288!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-74.005941!3d40.712776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDA5JzA5LjYiTiA3NMKwMzMnMzUuMyJX!5e0!3m2!1sen!2sus!4v1639569029325!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen=""></iframe> -->
+        </div>
+        
+        <!-- Right side (Contact Details) -->
+        <div class="details-container">
+            <h2>OUR OFFICE</h2>
+            <p><strong>Company Name</strong> <br>
+            2nd main, 142 street, opposite The ABC, <br>
+            Bangalore - 5600** <br>
+            INDIA</p>
+
+            <p><strong>Phone:</strong> 1234567890</p>
+
+            <p>If you would like to discuss a new project, please email us. <br>
+            <strong>abc@companyname.com</strong></p>
+
+            <p><strong>Follow us on:</strong></p>
+            <p class="icons1">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a> 
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </p>
+        </div>        
+    </main>
+
+    <footer>
+        &copy; All rights reserved.
+    </footer>   
+    <script src="https://kit.fontawesome.com/e207acd800.js" crossorigin="anonymous"></script>
+</body>
+</html>

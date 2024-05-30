@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 0%; /* Adjust the margin as needed */ 
+            display:inline-block; /* Display links in a single line */
+        }
+
+        header a:hover {
+            color: #000;
+        }
+
+        header nav a.active {
+            color: red;
+            font-weight: bold;
+        }
+
+        header img{
+            height: 50px; /* Adjust the height as needed */
+        }
+
+        nav{
+            margin-right: 2%; /* Adjust the margin as needed */
+        }
+
+        nav a{
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1000;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            color: red;
+        }
+
+        .icons{
+            display: inline;
+        }
+
+        .icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px; /* Adjust the font size as needed */
+        }
+
+        .icons a:hover {
+            color: #000;
+        }
+
+        footer {
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="main.html"> <!-- Link to the main page -->
+            <img src="C:\Users\heman\OneDrive\Desktop\my_work\photos\logo.png" alt="Logo" style="height: 50px;"> <!-- Adjust the height as needed -->
+        </a>
+        <nav>
+            <div class="dropdown">
+                <a href="work.html"  class="active">Work</a>
+                            <div class="dropdown-content">
+                                <a href="Industrial.html">Industrial Projects</a>
+                                <a href="Residential.html">Residential Projects</a>
+                            </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <div class="icons">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a> 
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+    </main>    
+
+    <footer>
+        &copy; All rights reserved.
+    </footer>   
+    <script src="https://kit.fontawesome.com/e207acd800.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

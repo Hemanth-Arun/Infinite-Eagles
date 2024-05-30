@@ -1,0 +1,37 @@
+=>Folder name - my_work
+
+Website
+-------
+
+Main page {transition effects, stylish}
+---------
+> top-left - logo
+> top-right - work, about us, contact, social media link
+> work 2 types - Industrial and Residential
+> scrolling images - click on image, then redirect to its work.
+> About us in same page - click on about, then redirect to same page near it. ***Pending***
+
+Contact page 
+-------------
+> left-side - Map
+> right-side - Office address, phone number, social media links
+
+Work page {transition effects, stylish}
+----------
+> 2 types - Industrial projects | Residential projects
+
+Industrial {transition effects, stylish}
+-----------
+> list of industrial projects (gallery)
+> click on any image, then redirect to other page that views full work.
+
+Residential {transition effects, stylish}
+------------
+> list of residential projects (gallery)
+> click on any image, then redirect to other page that views full work.
+
+Full work page {transition effects, stylish}    ***Pending***
+---------------
+> big rectagular main photo
+> project details - project_name, Location, client, area, year
+> project related photos [gallery]
